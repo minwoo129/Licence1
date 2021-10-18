@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="530dp"/>
+
+    <Button
+        android:id="@+id/startBt"
+        android:layout_below="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#F2D187"
+        android:text="시작하기"
+        android:textSize="25sp"/>
+
+</RelativeLayout>

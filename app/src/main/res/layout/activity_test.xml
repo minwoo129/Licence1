@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/topTv"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#F2D187" />
+
+    <ImageView
+        android:id="@+id/logoIv"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_marginTop="-8dp"
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="기출문제"
+            android:textSize="30dp"
+            android:textColor="#2D4180"/>
+
+        <Button
+            android:id="@+id/nextBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="12dp"
+            android:background="#2D4180"
+            android:text="다음"
+            android:textSize="20dp"
+            android:textColor="#DADADA"/>
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/finishBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="12dp"
+            android:background="#2D4180"
+            android:text="종료"
+            android:textSize="20dp"
+            android:textColor="#DADADA"/>
+
+        <TextView
+            android:id="@+id/qTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nextBt"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:maxWidth="380dp"
+            android:text="문제"
+            android:textSize="22dp"/>
+
+        <ImageView
+            android:id="@+id/qIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/qTv"/>
+
+        <RadioGroup
+            android:id="@+id/numGrup"
+            android:layout_width="380dp"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_below="@id/qIv"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true">
+
+            <RadioButton
+                android:id="@+id/ans1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="답1"
+                android:textSize="18dp"/>
+
+            <RadioButton
+                android:id="@+id/ans2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="답2"
+                android:textSize="18dp"/>
+
+            <RadioButton
+                android:id="@+id/ans3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="답3"
+                android:textSize="18dp"/>
+
+            <RadioButton
+                android:id="@+id/ans4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="답4"
+                android:textSize="18dp"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/secTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/subLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="시험 결과"
+            android:textColor="#2D4180"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:id="@+id/numTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="점수"
+            android:textSize="30dp"/>
+
+        <GridView
+            android:id="@+id/gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:numColumns="5"
+            android:layout_below="@id/numTv"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLay"
+        android:layout_height="70dp"
+        android:layout_width="match_parent"
+        android:background="#2D4180"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:background="@drawable/calendar_bt"
+            android:id="@+id/calendarBt"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"/>
+
+        <Button
+            android:layout_height="60dp"
+            android:layout_width="60dp"
+            android:background="@drawable/memo_bt"
+            android:id="@+id/memoBt"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"/>
+
+        <Button
+            android:layout_height="60dp"
+            android:layout_width="60dp"
+            android:background="@drawable/test_bt"
+            android:id="@+id/testBt"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="40dp"/>
+
+        <Button
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:background="@drawable/person_bt"
+            android:id="@+id/accountBt"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

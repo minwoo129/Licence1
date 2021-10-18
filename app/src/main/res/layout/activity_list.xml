@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F2D187"
+        android:text="상세항목"
+        android:gravity="center"
+        android:textColor="#2D4180"
+        android:textSize="30sp"/>
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="-12dp"
+        android:src="@drawable/logo" />
+
+
+    <ListView
+        android:id="@+id/lstTv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:dividerHeight="0px"
+        android:divider="#FFFFFF"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/lnLt"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2D4180">
+
+
+        <Button
+            android:id="@+id/calendarBt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/calendar_bt" />
+
+
+        <Button
+            android:id="@+id/memoBt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/memo_bt" />
+
+        <Button
+            android:id="@+id/testBt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/test_bt" />
+
+        <Button
+            android:id="@+id/accountBt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/person_bt" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMemoActivity">
+
+    <TextView
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#F2D187"
+        android:text="메모"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textColor="#2D4180"/>
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_marginTop="-8dp"
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:background="#ffffff">
+
+        <Button
+            android:id="@+id/cancelTv"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentTop="true"
+            android:background="#DCFDE7B3"
+            android:gravity="center"
+            android:text="취소"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/saveTv"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="#DCFDE7B3"
+            android:gravity="center"
+            android:text="저장"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/titleEt"
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/cancelTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="#172D4180"
+            android:hint="제목"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/contentEt"
+            android:layout_width="380dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/titleEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="#172D4180"
+            android:hint="내용"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/clearBt"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/pencil"/>
+
+        <Button
+            android:id="@+id/deleteBt"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="19dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/delete"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F2D187"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#2D4180"/>
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="-12dp"
+        android:src="@drawable/logo" />
+
+    <!--                                                      -->
+
+    <RelativeLayout
+        android:id="@+id/calenderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnLayout"
+        android:layout_below="@+id/top_bar"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/weekTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   일       월      화       수      목       금      토  "
+            android:textSize="23sp"
+            android:background="@drawable/border"
+            android:layout_below="@+id/RL"/>
+
+        <RelativeLayout
+            android:id="@+id/RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/pre_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#DCFDE7B3"
+                android:textSize="18sp"
+                android:text="이전달"/>
+
+            <TextView
+                android:id="@+id/monthTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="\?월"
+                android:textSize="30sp"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#DCFDE7B3"
+                android:textSize="18sp"
+                android:text="다음달"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/calGv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weekTv"
+            android:numColumns="7"
+            android:background="@drawable/border"/>
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calGv"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  "
+                android:background="#ff0000"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" : 기술사시험시작일"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  "
+                android:background="#00ff00"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" : 기사시험시작일"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  "
+                android:background="#0000ff"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" : 기능사시험시작일"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp" />
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+    <!--                                                      -->
+
+    <RelativeLayout
+        android:id="@+id/memoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnLayout"
+        android:layout_below="@+id/top_bar"
+        android:visibility="gone">
+
+
+        <ListView
+            android:id="@+id/memoLv"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"/>
+
+        <Button
+            android:id="@+id/addMemoBt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/add"/>
+
+    </RelativeLayout>
+
+    <!--                                                      -->
+
+    <RelativeLayout
+        android:id="@+id/testLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnLayout"
+        android:layout_below="@+id/top_bar"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/listLv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+
+
+    </RelativeLayout>
+
+    <!--                                                      -->
+
+    <RelativeLayout
+        android:id="@+id/accountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnLayout"
+        android:layout_below="@+id/top_bar"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="사용자명"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/userNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="로그인 계정"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/userAuthTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp">
+                <Button
+                    android:id="@+id/logoutBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="로그아웃"/>
+                <Button
+                    android:id="@+id/changePwBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="비밀번호 변경"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/administorBt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="관리자모드"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--                                                      -->
+
+    <RelativeLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/inputIdEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="아이디"/>
+                    <EditText
+                        android:id="@+id/inputPwEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="비밀번호"
+                        android:inputType="textPassword"/>
+
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/loginBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="로그인"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/addAccountBt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="회원가입"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/addAccountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="이름"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/nameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="아이디"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/idEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/sameCheckBt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="아이디 중복확인"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="비밀번호"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/pwEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="비밀번호 확인"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/pwEt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"/>
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/rg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="일반 사용자"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="관리자"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/adminPassEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="관리자용 접근 암호를 입력하세요!"
+                android:inputType="textPassword"
+                android:visibility="invisible"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/addBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="회원가입"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2D4180"
+        android:visibility="visible">
+
+
+        <Button
+            android:id="@+id/calendarBt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/calendar_bt" />
+
+
+        <Button
+            android:id="@+id/memoBt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/memo_bt" />
+
+        <Button
+            android:id="@+id/testBt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/test_bt" />
+
+        <Button
+            android:id="@+id/accountBt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/person_bt" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
